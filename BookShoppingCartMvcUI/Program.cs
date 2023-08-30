@@ -24,10 +24,12 @@ builder.Services.AddTransient<ICartRepository,CartRepository>();
 builder.Services.AddTransient<IUserOrderRepository,UserOrderRepository>();
 var app = builder.Build();
 
-using(var scope = app.Services.CreateScope())
-{
-    await DbSeeder.SeedDefaultData(scope.ServiceProvider);
-}
+// UNCOMMENT ONCE YOU HAVE THE DATABASE WORKING
+
+//using(var scope = app.Services.CreateScope())
+//{
+//    await DbSeeder.SeedDefaultData(scope.ServiceProvider);
+//}
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
