@@ -10,6 +10,17 @@ namespace BookShoppingCartMvcUI.Data
         {
             var userMgr = service.GetService<UserManager<IdentityUser>>();
             var roleMgr = service.GetService<RoleManager<IdentityRole>>();
+
+
+            if (userMgr == null)
+            {
+                throw new ArgumentNullException(nameof(userMgr));
+            }
+            if (roleMgr == null)
+            {
+                throw new ArgumentNullException(nameof(userMgr));
+            }
+
             //adding some Test to db
             await roleMgr.CreateAsync(new IdentityRole(Roles.Admin.ToString()));
             await roleMgr.CreateAsync(new IdentityRole(Roles.User.ToString()));

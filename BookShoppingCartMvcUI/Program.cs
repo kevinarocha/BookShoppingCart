@@ -26,10 +26,10 @@ var app = builder.Build();
 
 // UNCOMMENT ONCE YOU HAVE THE DATABASE WORKING
 
-//using(var scope = app.Services.CreateScope())
-//{
-//    await DbSeeder.SeedDefaultData(scope.ServiceProvider);
-//}
+using (var scope = app.Services.CreateScope())
+{
+    await DbSeeder.SeedDefaultData(scope.ServiceProvider);
+}
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
