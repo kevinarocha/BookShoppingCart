@@ -13,7 +13,7 @@ namespace BookShoppingCartMvcUI.Services
 
             //var connectionString = configuration.GetConnectionString("BlogDb");
 
-            var connectionString = configuration.GetConnectionString("DATABASE_URL");
+            var connectionString = configuration.GetConnectionString("DefaultConnection");
 
             //It will be automatically overwritten if running on Railway
             var databaseUrl = Environment.GetEnvironmentVariable("DATABASE_URL");
