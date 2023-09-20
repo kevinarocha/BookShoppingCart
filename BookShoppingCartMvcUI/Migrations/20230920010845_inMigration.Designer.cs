@@ -12,8 +12,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace BookShoppingCartMvcUI.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20230831005137_firstMigration1")]
-    partial class firstMigration1
+    [Migration("20230920010845_inMigration")]
+    partial class inMigration
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
