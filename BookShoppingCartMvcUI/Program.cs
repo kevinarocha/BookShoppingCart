@@ -7,7 +7,9 @@ var builder = WebApplication.CreateBuilder(args);
 //DefaultConnection
 
 // Add services to the container.
-var connectionString = builder.Configuration.GetConnectionString("DefaultConnection") ?? Environment.GetEnvironmentVariable("DATABASE_URL");
+//var connectionString = builder.Configuration.GetConnectionString("DefaultConnection") ?? Environment.GetEnvironmentVariable("DATABASE_URL");
+var connectionString = Environment.GetEnvironmentVariable("DATABASE_URL");
+
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseNpgsql(connectionString));
 
