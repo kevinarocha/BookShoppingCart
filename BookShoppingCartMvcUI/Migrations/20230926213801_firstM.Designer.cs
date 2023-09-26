@@ -12,7 +12,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace BookShoppingCartMvcUI.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20230926204444_firstM")]
+    [Migration("20230926213801_firstM")]
     partial class firstM
     {
         /// <inheritdoc />

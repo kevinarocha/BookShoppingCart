@@ -50,6 +50,13 @@ var app = builder.Build();
 
 // UNCOMMENT ONCE YOU HAVE THE DATABASE WORKING
 
+
+
+
+//var dataService = app.Services.CreateScope().ServiceProvider.GetRequiredService<DbSeeder>();
+//await dataService.ManageDataAsync();
+
+
 using (var scope = app.Services.CreateScope())
 {
     await DbSeeder.SeedDefaultData(scope.ServiceProvider);
