@@ -17,7 +17,7 @@ options.UseNpgsql(connectionString));
 
 //DefaultConnection
 
-// Add services to the container.
+//Add services to the container.
 //var connectionString = builder.Configuration.GetConnectionString("DefaultConnection") ?? Environment.GetEnvironmentVariable("DATABASE_URL");
 //var connectionString = Environment.GetEnvironmentVariable("DATABASE_URL");
 

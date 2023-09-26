@@ -6,7 +6,9 @@ public static class DefaultConnectionService
 {
     public static string GetConnectionString(IConfiguration configuration)
     {
-        var connectionString = configuration["DefaultConnection"];
+        //var connectionString = configuration["DefaultConnection"];
+
+        var connectionString = configuration.GetConnectionString("DefaultConnection");
         var databaseUrl = Environment.GetEnvironmentVariable("DATABASE_URL");
         return String.IsNullOrEmpty(databaseUrl) ? connectionString : BuildConnectionString(databaseUrl);
     }
